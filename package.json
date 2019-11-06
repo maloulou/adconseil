@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "env-cmd -f ./.env nodemon app.js",
+    "serve": "node ./bin/www"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -13,10 +14,13 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.3.3",
     "morgan": "~1.9.1",
     "validator": "^12.0.0"
   },
   "devDependencies": {
-    "mongoose": "^5.7.8"
+    "env-cmd": "^10.0.1",
+    "mongoose": "^5.7.8",
+    "nodemon": "^1.19.4"
   }
 }
